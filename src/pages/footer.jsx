@@ -66,6 +66,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+        
 
         <div style={styles.section}>
           <h3>Contact Us</h3>
