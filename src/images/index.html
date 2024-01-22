@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!-- saved from url=(0091)https://cdpn.io/cpe/boomboom/index.html?key=index.html-126c9793-293c-81ba-82b2-2f24dfbbcf2c -->
+<html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <title>CodePen Demo</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/Sri-Harsha-Srigiri/pen/eYXRxQW">
+
+  
+  
+
+  <style id="INLINE_PEN_STYLESHEET_ID">
+    @import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
+* {
+   margin: 0px;
+   padding: 0px;
+}
+
+body {
+   font-family: "Exo", sans-serif;
+}
+
+.context {
+   width: 100%;
+   position: absolute;
+   top: 50vh;
+}
+
+.context h1 {
+   text-align: center;
+   color: #fff;
+   font-size: 50px;
+}
+
+.area {
+   background: #4e54c8;
+   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+   width: 100%;
+   height: 100vh;
+}
+
+.circles {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+
+.circles li {
+   position: absolute;
+   display: block;
+   list-style: none;
+   width: 20px;
+   height: 20px;
+   background: rgba(255, 255, 255, 0.2);
+   animation: animate 25s linear infinite;
+   bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+   left: 25%;
+   width: 80px;
+   height: 80px;
+   animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+   left: 10%;
+   width: 20px;
+   height: 20px;
+   animation-delay: 2s;
+   animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+   left: 70%;
+   width: 20px;
+   height: 20px;
+   animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+   left: 40%;
+   width: 60px;
+   height: 60px;
+   animation-delay: 0s;
+   animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+   left: 65%;
+   width: 20px;
+   height: 20px;
+   animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+   left: 75%;
+   width: 110px;
+   height: 110px;
+   animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+   left: 35%;
+   width: 150px;
+   height: 150px;
+   animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+   left: 50%;
+   width: 25px;
+   height: 25px;
+   animation-delay: 15s;
+   animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+   left: 20%;
+   width: 15px;
+   height: 15px;
+   animation-delay: 2s;
+   animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+   left: 85%;
+   width: 150px;
+   height: 150px;
+   animation-delay: 0s;
+   animation-duration: 11s;
+}
+
+@keyframes animate {
+   0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+   }
+
+   100% {
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+   }
+}
+
+  </style>
+
+  
+<script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.download"></script>
+<script src="./iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js.download"></script>
+<script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.download"></script>
+<script src="./iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js.download"></script>
+</head>
+
+<body>
+  <!--    <div class="context">
+        <h1>Pure Css Animated Background</h1>
+    </div>
+ -->
+
+<div class="area">
+   <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+   </ul>
+</div>
+  
+  <script src="./pen.js.download" crossorigin=""></script>
+
+
+</body></html>
