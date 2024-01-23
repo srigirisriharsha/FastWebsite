@@ -82,7 +82,7 @@ const Home = () => {
 
         <div
           style={{
-            padding: "20px",
+            padding: "50px",
             flexDirection: "row",
           }}
         >
@@ -179,7 +179,7 @@ const styles = {
     marginTop: "20px",
   },
   image: {
-    height: "350px",
+    height: "480px",
     width: "50%",
     borderRadius: "10px",
     padding: "50px",
@@ -190,7 +190,7 @@ const styles = {
     borderRadius: "10px",
   },
   featureText: {
-    padding: "20px",
+    padding: "50px",
     flex: 1,
     display: "flex",
     flexDirection: "column",

@@ -93,7 +93,7 @@ const Footer = () => {
         </div>
         <div style={styles.section}>
           <h3>Others</h3>
-          <a href="/" className={classes.link}>
+          <a href="/policy" className={classes.link}>
             Policy
           </a>
           {/* <p>Phone: +123 456 7890</p> */}

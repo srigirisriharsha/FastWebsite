@@ -7,6 +7,7 @@ import Contact from "./pages/contact";
 import Docs from "./pages/docs";
 import Version from "./pages/version";
 import Footer from "./pages/footer";
+import policy from "./pages/policy";
 const App = () => {
   return (
     <>
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/contact" component={Contact} />
           <Route path="/docs" component={Docs} />
           <Route path="/version" component={Version} />
+          <Route path="/policy" component={policy} />
         </Switch>
       </Router>
       <Footer />

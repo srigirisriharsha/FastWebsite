@@ -5,7 +5,7 @@ function policy() {
     <div style={styles.container}>
       <Container style={styles.contentContainer}>
         <Typography align="center" style={styles.heading}>
-          Docs
+          Policy
         </Typography>
       </Container>
     </div>
