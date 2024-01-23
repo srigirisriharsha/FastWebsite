@@ -6,7 +6,8 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-export default function RequestForDemo({open,handleClose}) {
+import { DialogContentText } from "@material-ui/core";
+export default function RequestForDemo({ open, handleClose }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phNo, setPhNo] = useState("");
@@ -16,7 +17,9 @@ export default function RequestForDemo({open,handleClose}) {
     e.preventDefault();
     //
   };
-
+  let text1 = "mailto:";
+  let text2 = "info@navtechelectronics.com";
+  let result = text1.concat(text2);
   return (
     <div style={styles.container}>
       <Dialog
@@ -34,8 +37,18 @@ export default function RequestForDemo({open,handleClose}) {
           },
         }}
       >
-        <DialogTitle>Request Demo</DialogTitle>
-        <DialogContent>
+        <DialogTitle
+          style={{
+            backgroundColor: "#0ca867",
+            paddingTop: "10px",
+            paddingBottom: "10px",
+            color: "white",
+            fontWeight: "bold",
+          }}
+        >
+          Request Demo
+        </DialogTitle>
+        <DialogContent style={{ padding: "20px" }}>
           <DialogContentText>
             Reach us anytime at{" "}
             <Typography
@@ -50,7 +63,7 @@ export default function RequestForDemo({open,handleClose}) {
               key="Email"
               component="a"
               href={result}
-              style={{ color: "green" }}
+              style={{ color: "#0ca867" }}
             >
               info@navtechelectronics.com
             </Typography>
@@ -96,19 +109,27 @@ export default function RequestForDemo({open,handleClose}) {
               rows={4}
               size="small"
             />
-            <Button
+            {/* <Button
               variant="contained"
               type="submit"
               sx={{ mt: 2 }}
               style={{ backgroundColor: "#0ca867" }}
             >
               Submit
-            </Button>
+            </Button> */}
           </form>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button type="submit">Request</Button>
+          <Button onClick={handleClose} style={{ color: "#4c52c4" }}>
+            Cancel
+          </Button>
+          <Button
+            type="submit"
+            variant="contained"
+            style={{ backgroundColor: "#0ca867" }}
+          >
+            Request
+          </Button>
         </DialogActions>
       </Dialog>
     </div>

@@ -15,14 +15,6 @@ import { styled } from "@mui/material/styles";
 
 import RequestForDemo from "./requestForDemo";
 
-const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  "& .MuiDialogContent-root": {
-    padding: theme.spacing(2),
-  },
-  "& .MuiDialogActions-root": {
-    padding: theme.spacing(1),
-  },
-}));
 const Home = () => {
   const [open, setOpen] = React.useState(false);
 
@@ -32,9 +24,7 @@ const Home = () => {
   const handleClose = () => {
     setOpen(false);
   };
-  let text1 = "mailto:";
-  let text2 = "info@navtechelectronics.com";
-  let result = text1.concat(text2);
+
   return (
     <div style={styles.container}>
       <div style={styles.Frameworkcontainer}>
@@ -67,12 +57,12 @@ const Home = () => {
                 Request for Demo
               </Typography>
             </Button>
-            <RequestForDemo open={open} handleClose={handleClose} />
           </div>
         </div>
 
         <img src={laptopTest} alt="Image" style={styles.FrameworkImage} />
       </div>
+
       <Container style={styles.contentContainer}>
         {/* <div style={styles.carouselContainer}>
             <CarouselImages />
@@ -163,6 +153,7 @@ const Home = () => {
           </div>
         </div>
       </Container>
+      {open && <RequestForDemo open={open} handleClose={handleClose} />}
 
       {/* <div style={styles.footer}>
         <Typography align="center" style={styles.footerText}>
