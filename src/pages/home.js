@@ -1,17 +1,45 @@
-import React from "react";
-import { Container, Typography } from "@material-ui/core";
+import * as React from "react";
+import {
+  Button,
+  Container,
+  Dialog,
+  DialogContentText,
+  TextField,
+  Typography,
+} from "@material-ui/core";
 import image from "../images/experiance seamless.png";
 import laptopTest from "../images/automationImag.png";
 import thinking from "../images/thinking.png";
 import homegif from "../images/Pintire.gif";
-import { CarouselImages } from "./Carousel";
-import GifPlayer from "react-gif-player";
+import { styled } from "@mui/material/styles";
+
+import RequestForDemo from "./requestForDemo";
+
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+  "& .MuiDialogContent-root": {
+    padding: theme.spacing(2),
+  },
+  "& .MuiDialogActions-root": {
+    padding: theme.spacing(1),
+  },
+}));
 const Home = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+  let text1 = "mailto:";
+  let text2 = "info@navtechelectronics.com";
+  let result = text1.concat(text2);
   return (
     <div style={styles.container}>
       <div style={styles.Frameworkcontainer}>
         <div style={styles.textContainer}>
-          <div >
+          <div>
             <div align="center" style={styles.Frameworkheading}>
               SYSTEM TEST FRAMEWORK
             </div>
@@ -23,14 +51,26 @@ const Home = () => {
             <Typography style={styles.FrameworkheadingContent}>
               Supports and connects so many different test tools, that it easily
               fits in numerous existing test and validation processes.
-            </Typography>{" "}
+            </Typography>
             <Typography style={styles.FrameworkheadingContent}>
               Test quality is kept exceptionally high at all levels, although
               the effort it takes to use it is extremely low.
             </Typography>
           </div>
+          <div style={styles.link}>
+            <Button
+              variant="contained"
+              style={{ textTransform: "none" }}
+              onClick={handleClickOpen}
+            >
+              <Typography style={{ color: "#551a8b", fontWeight: "bold" }}>
+                Request for Demo
+              </Typography>
+            </Button>
+            <RequestForDemo open={open} handleClose={handleClose} />
+          </div>
         </div>
-  
+
         <img src={laptopTest} alt="Image" style={styles.FrameworkImage} />
       </div>
       <Container style={styles.contentContainer}>
@@ -162,11 +202,11 @@ const styles = {
     // fontFamily: "Work Sans",
     marginTop: "20px",
   },
-  boxStyle : {
+  boxStyle: {
     // border: '2px solid #000', // Specify the border style
-    borderRadius: '10px', // Specify the border radius
-    padding: '20px', // Add padding for the content inside the box
-    backgroundColor: 'rgba(255, 255, 255, 0.5)', // Specify the background color with transparency
+    borderRadius: "10px", // Specify the border radius
+    padding: "20px", // Add padding for the content inside the box
+    backgroundColor: "rgba(255, 255, 255, 0.5)", // Specify the background color with transparency
   },
   description: {
     fontSize: "20px",
@@ -222,6 +262,22 @@ const styles = {
   textContainer: {
     flex: 1,
     // marginRight: "20px", // Adjust the margin as needed
+  },
+  link: {
+    textDecoration: "none",
+    // color: "white",
+    fontSize: "15px",
+    // marginLeft: theme.spacing(10),
+    borderBottom: "1px solid transparent",
+    "&:hover": {
+      color: "#551a8b",
+      borderBottom: "1px solid white",
+      fontWeight: "bold",
+      // backgroundColor:"#551a8b",
+      // width:"40px"
+    },
+    fontWeight: "bold",
+    padding: "20px",
   },
 };
 
